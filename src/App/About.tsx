@@ -1,4 +1,9 @@
 
+import image2 from "../../src/assets/images/Images2.png"
+import image3 from "../../src/assets/images/images3.png"
+import image4 from "../../src/assets/images/images4.png"
+import About from "../../src/assets/images/About us.png"
+import memo from "../../src/assets/images/emo.png"
 type FeatureProps = {
   title: string;
   desc: string;
@@ -16,7 +21,7 @@ export default function AboutSection() {
 
           <div className="flex flex-col gap-6">
             <img
-              src="../../src/assets/images/Images2.png"
+              src={image2}
               alt=""
               className="rounded-2xl w-full h-[500px] object-cover relative z-0"
             />
@@ -24,13 +29,13 @@ export default function AboutSection() {
 
           <div className="relative flex flex-col gap-6">
             <img
-              src="../../src/assets/images/images3.png"
+              src={image3}
               alt=""
               className="rounded-2xl w-[222px] h-[188.0399932861328px] object-cover"
             />
 
             <img
-              src="../../src/assets/images/images4.png"
+              src={image4}
               alt=""
               className="rounded-2xl w-[700px] h-[450px] object-cover
                 relative -left-13 md:-bottom-0 z-10 shadow-xl"
@@ -44,7 +49,7 @@ export default function AboutSection() {
 
           {/* Title */}
           <div className="flex flex-col items-start gap-2 mb-4">
-            <img src="../../src/assets/images/About us.png" alt="About us" />
+            <img src={About} alt="About us" />
 
             <div className="flex items-center gap-2">
               <i className="fa-solid fa-dumbbell text-[#ff4500] text-[25px]"></i>
@@ -67,7 +72,7 @@ export default function AboutSection() {
             of the way.
           </p>
 
-          {/* Features */}
+         
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Feature
               title="Personal Trainer"
@@ -92,10 +97,10 @@ export default function AboutSection() {
             />
           </div>
 
-          {/* Buttons */}
+         
           <div className="flex justify-between items-center gap-15 mt-10">
 
-            {/* CTA */}
+            
             <div className="relative">
               <button
                 className="bg-[#ff4500] text-white px-10 py-3 rounded-full
@@ -112,9 +117,9 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* Chat */}
+           
             <div className="flex flex-col items-center md:items-start gap-2">
-              <img className="w-30 h-30" src="../../src/assets/images/emo.png" alt="emo" />
+              <img className="w-30 h-30" src={memo} alt="emo" />
               <button className="bg-[#e63e00] mb-20 text-white px-6 py-2 rounded-full">
                 Hey Ask me
               </button>

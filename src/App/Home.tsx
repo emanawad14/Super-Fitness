@@ -2,7 +2,7 @@
 import Button from "@/shared/Button";
 import { Navbar } from "./Navbar";
 
-
+import home from "../../src/assets/images/Theo Vance.png"
 export default function Hero() {
   return (
    
@@ -64,7 +64,7 @@ export default function Hero() {
         
         <div className="relative flex flex-col items-center md:items-end">
           <img
-            src="../../src/assets/images/Theo Vance.png"
+            src={home}
             alt="Hero"
             className="object-contain w-[280px] md:w-[400px] rounded-2xl"
           />
