@@ -3,6 +3,7 @@ import Button from "@/shared/Button";
 import { Navbar } from "./Navbar";
 
 import home from "../../src/assets/images/Theo Vance.png"
+import MarqueeCarousel from "@/shared/Slider";
 export default function Hero() {
   return (
    
@@ -72,6 +73,7 @@ export default function Hero() {
 
       </div>
     </section>
+    <MarqueeCarousel></MarqueeCarousel>
     
     </>
   );

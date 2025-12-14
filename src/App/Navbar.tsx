@@ -8,6 +8,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Button from "@/shared/Button";
+import logo from "../../src/assets/images/auth1.png"
 
 
 export function Navbar() {
@@ -18,7 +19,7 @@ export function Navbar() {
      
         <div className="flex items-center">
           <img
-            src="/src/assets/images/auth1.png"
+            src={logo}
             alt="Logo"
             className="w-14 h-14 rounded-full"
           />
