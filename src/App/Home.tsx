@@ -1,15 +1,20 @@
 
 import Button from "@/shared/Button";
-import { Navbar } from "./Navbar";
+
 
 import home from "../../src/assets/images/Theo Vance.png"
 import MarqueeCarousel from "@/shared/Slider";
+import AboutSection from "./About";
+import WorkOut from "./WorkOut";
+import WhyUsSection from "./WhyUs";
+import Meals from "./Meals";
 export default function Hero() {
   return (
    
     <>
 
-    <Navbar/>
+   
+   
      <section
       className="text-white min-h-screen py-10 flex items-center"
       style={{
@@ -74,6 +79,10 @@ export default function Hero() {
       </div>
     </section>
     <MarqueeCarousel></MarqueeCarousel>
+    <AboutSection></AboutSection>
+    <WorkOut></WorkOut>
+    <WhyUsSection></WhyUsSection>
+    <Meals></Meals>
     
     </>
   );

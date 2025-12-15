@@ -1,15 +1,24 @@
-import AboutSection from "./App/About";
+import { Routes, Route } from "react-router-dom";
+
 import Home from "./App/Home";
-import WhyUsSection from "./App/WhyUs";
-import MarqueeCarousel from "./shared/Slider";
+import AboutSection from "./App/About";
+import WorkOut from "./App/WorkOut";
+import Meals from "./App/Meals";
+
 
 export default function App() {
   return (
-    <div>
-       <Home/>
-        <AboutSection/>
-           <WhyUsSection></WhyUsSection>
-           <MarqueeCarousel></MarqueeCarousel>
-    </div>
-  )
+    <>
+     
+     
+     
+
+      <Routes>
+        <Route path="/"element={<><Home/></> } />
+        <Route path="/AboutSection" element={<AboutSection />} />
+        <Route path="/workout" element={<WorkOut />} />
+        <Route path="/meals" element={<Meals />} />
+      </Routes>
+    </>
+  );
 }

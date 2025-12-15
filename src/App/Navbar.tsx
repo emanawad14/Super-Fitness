@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Button from "@/shared/Button";
 import logo from "../../src/assets/images/auth1.png"
+import { NavLink } from "react-router-dom";
 
 
 export function Navbar() {
@@ -27,15 +28,15 @@ export function Navbar() {
 
        
         <div className="hidden md:flex space-x-20 font-semibold">
-          <a href="/" className="hover:text-[#ff4500]">Home</a>
-          <a href="/about" className="hover:text-[#ff4500]">About</a>
-          <a href="/classes" className="hover:text-[#ff4500]">Classes</a>
-          <a href="/healthy" className="hover:text-[#ff4500]">Healthy</a>
+          <NavLink to="/" className="hover:text-[#ff4500]">Home</NavLink>
+          <NavLink to="/AboutSection" className="hover:text-[#ff4500]">About</NavLink>
+          <NavLink to="/workout" className="hover:text-[#ff4500]">Classes</NavLink>
+          <NavLink to="/meals" className="hover:text-[#ff4500]">Healthy</NavLink>
         </div>
 
         
         <div className="hidden md:flex space-x-12 items-center">
-          <Button type="signup" text="Login" />
+          <Button  type="signup" text="Login" />
           <Button type="login" text="Register" />
         </div>
 
@@ -49,15 +50,18 @@ export function Navbar() {
                 <NavigationMenuContent className="bg-[#141414] p-4 rounded-lg space-y-3">
 
                   <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <a href="/">Home</a>
+                    <NavLink to="/">Home</NavLink>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                    <NavLink to="/AboutSection">About</NavLink>
                   </NavigationMenuLink>
 
                   <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <a href="/classes">Classes</a>
+                    <NavLink to="/workout">Classes</NavLink>
                   </NavigationMenuLink>
 
                   <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <a href="/healthy">Healthy</a>
+                    <NavLink to="/meals">Healthy</NavLink>
                   </NavigationMenuLink>
 
                   <div className="flex flex-col gap-3 mt-4">
