@@ -5,7 +5,7 @@ import { ICateMeals } from "@/interfaces/category";
 import CategoryTabs from "@/shared/CategoryTabs";
 import MealCard from "@/shared/CategoryCard";
 import healthy from "../../src/assets/images/Healthy.png";
-import "./meals.css"
+import "./meals.css";
 import MarqueeCarousel from "@/shared/Slider";
 
 export default function MealsHealthy() {
@@ -13,7 +13,6 @@ export default function MealsHealthy() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [meals, setMeals] = useState<ICateMeals[]>([]);
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     getMealsCategory()
@@ -24,36 +23,31 @@ export default function MealsHealthy() {
       .finally(() => setLoading(false));
   }, []);
 
- 
   useEffect(() => {
     if (!activeCategory) return;
 
     setLoading(true);
     getCategoryMeals(activeCategory)
-      .then((data) => setMeals(data.meals.slice(0,3)))
+      .then((data) => setMeals(data.meals.slice(0, 3)))
       .finally(() => setLoading(false));
   }, [activeCategory]);
 
-  if (loading) return <p className="text-center">
-    <i className="fas fa-spinner fa-spin fa-4x py-80"></i>
-  </p>;
+  if (loading)
+    return (
+      <p className="text-center">
+        <i className="fas fa-spinner fa-spin fa-4x py-80"></i>
+      </p>
+    );
 
   return (
-    
     <>
-    
-    
-    <section className="image text-center py-30 relative">
+      <section className="image text-center py-30 relative">
+        <div className="flex flex-col items-center">
+          <img src={healthy} alt="" className="w-auto"></img>
+        </div>
 
-       <div className="flex flex-col items-center">
-                <img src={healthy} alt="" className="w-auto"></img>
-              </div>
-
-
-
- 
- <div className="bg-[#FFFFFF99] w-full py-10 relative px-4">
-  <div className="flex items-center justify-center gap-2">
+        <div className="bg-[#FFFFFF99] w-full py-10 relative px-4">
+          <div className="flex items-center justify-center gap-2">
             <i className="fa-solid fa-dumbbell text-[#ff4500] text-[25px]"></i>
             <span className="font-semibold tracking-wide text-[#ff4500]">
               Healthy Nutritions
@@ -69,29 +63,21 @@ export default function MealsHealthy() {
             you
           </h1>
 
-    
-      <CategoryTabs
-        categories={categories}
-        activeCategory={activeCategory}
-        onSelect={setActiveCategory}
-      />
+          <CategoryTabs
+            categories={categories}
+            activeCategory={activeCategory}
+            onSelect={setActiveCategory}
+          />
 
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {meals.map((meal) => (
-          <MealCard key={meal.idMeal} meal={meal} />
-        ))}
-      </div>
-
-
-
- </div>
-  <div className="hidden md:block h-60"></div>
-
-    </section>
-     <MarqueeCarousel></MarqueeCarousel>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {meals.map((meal) => (
+              <MealCard key={meal.idMeal} meal={meal} />
+            ))}
+          </div>
+        </div>
+        <div className="hidden md:block h-60"></div>
+      </section>
+      <MarqueeCarousel></MarqueeCarousel>
     </>
-
-
   );
 }

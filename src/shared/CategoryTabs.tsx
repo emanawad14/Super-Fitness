@@ -1,4 +1,3 @@
-
 import { IMealCategory } from "@/interfaces/MealCategory";
 import { useRef } from "react";
 
@@ -29,10 +28,7 @@ export default function CategoryTabs({
         <i className="fa-solid fa-arrow-left"></i>
       </button>
 
-      <div
-        ref={sliderRef}
-        className="flex gap-4 max-w-[800px] overflow-hidden"
-      >
+      <div ref={sliderRef} className="flex gap-4 max-w-[800px] overflow-hidden">
         {categories.map((cat) => (
           <button
             key={cat.idCategory}

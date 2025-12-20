@@ -3,7 +3,7 @@ import { getMealsCategory } from "@/services/mealsCategory";
 import { useEffect, useState } from "react";
 import healthy from "../../src/assets/images/Healthy.png";
 import MarqueeCarousel from "@/shared/Slider";
-import { IMealCategory } from "@/interfaces/mealCategory";
+import { IMealCategory } from "@/interfaces/MealCategory";
 
 export default function Meals() {
   const [meals, setMeals] = useState<IMealCategory[]>([]);
