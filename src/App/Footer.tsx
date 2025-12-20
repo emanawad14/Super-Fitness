@@ -11,7 +11,7 @@ export default function Footer() {
           <p>Your fitness journey starts today!</p>
         </div>
 
-        {/* Contact Us */}
+        
         <div className="space-y-4 text-center md:text-left">
           <h2 className="text-xl font-bold mb-2">Contact Us</h2>
 
@@ -30,14 +30,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Gym Timing */}
+       
         <div className="space-y-4 text-center md:text-left">
           <h2 className="text-xl font-bold mb-2">Our Gym Timing</h2>
           <p>Mon - Fri : 08:00 AM - 10:00 PM</p>
           <p>Sat - Sun : 08:00 AM - 09:00 PM</p>
         </div>
 
-        {/* Location */}
+        
         <div className="space-y-4 text-center md:text-left">
           <h2 className="text-xl font-bold mb-2">Our Location</h2>
           <p>2715 Ash Dr. San Jose, South</p>

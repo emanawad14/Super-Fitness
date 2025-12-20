@@ -40,6 +40,10 @@ export default function WorkOut() {
       .finally(() => setLoading(false));
   };
 
+  if (loading) return <p className="text-center">
+    <i className="fas fa-spinner fa-spin fa-4x py-80"></i>
+  </p>;
+
   return (
     <>
 
@@ -79,9 +83,9 @@ export default function WorkOut() {
 
  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {loading && (
-          <p className="text-center col-span-full text-gray-500">
-            Loading...
-          </p>
+         <p className="text-center">
+    <i className="fas fa-spinner fa-spin fa-4x py-80"></i>
+  </p>
         )}
 
         {!loading &&

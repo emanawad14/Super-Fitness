@@ -5,10 +5,6 @@ export interface IMealCategory {
   strCategoryDescription: string;
 }
 
-
-
-
-
 export interface IMealsCategoryResponse {
   categories: IMealCategory[];
 }
